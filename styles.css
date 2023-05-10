@@ -9,3 +9,16 @@ div.heading {
 .papajones.people {
   color: red;
 }
+
+a {
+  font-style: inherit;
+  font-size: 4vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 12px;
+}
+
+h1 {
+  font-style: light;
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,11 +1,14 @@
 p {
-    color: aqua;
+  color: aqua;
 }
 
 .teaser {
-    color: brown;
+  color: brown;
 }
 
 .pepe {
-    color: blueviolet;
+  color: blueviolet;
+}
+#bigheading {
+  color: red;
 }
