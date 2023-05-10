@@ -1,0 +1,16 @@
+#bigheading {
+  color: red;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  margin: 100px;
+  padding: 1vw;
+}
