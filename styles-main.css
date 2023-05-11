@@ -54,3 +54,8 @@ footer {
   right: 0;
   bottom: 0;
 }
+
+canvas {
+  position: relative;
+  z-index: -3 !important;
+}
