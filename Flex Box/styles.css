@@ -2,15 +2,29 @@
   color: red;
 }
 .container {
+  background-color: rgb(0, 255, 195);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2 {
+  background-color: blue;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .item {
-  width: 100px;
-  height: 100px;
+  width: auto;
+  height: auto;
   background-color: #ccc;
   margin: 100px;
   padding: 1vw;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
 }
