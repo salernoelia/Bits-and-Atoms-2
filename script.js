@@ -4,10 +4,6 @@ let diameter = 40;
 let d = 300
 let amount = 50
 
-function preload() {
-  grain = loadImage("/grain.png");
-}
-
 function setup() {
    
     let cnv = createCanvas(windowWidth, windowHeight);
@@ -19,15 +15,10 @@ function setup() {
   }
   
   function draw() {
-    
     background(68,13,15)
-
-    
     translate(windowWidth/2,windowHeight/2)
-    //line
-    
+
     for (let i = 0; i < width; i+= 3) {
-      
       noStroke();
       scale(0.999)
       rotate(20) //simple rotation
