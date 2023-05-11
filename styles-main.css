@@ -1,6 +1,6 @@
 body {
-  filter: contrast(170%) brightness(1000%);
-  background: radial-gradient(#e66465, #9198e5);
+  /* filter: contrast(170%) brightness(1000%);
+  background: radial-gradient(#e66465, #9198e5); */
   padding-top: 4vh;
   padding-left: 4vw;
   position: relative;
