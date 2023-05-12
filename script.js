@@ -7,7 +7,7 @@ let amount = 50
 function setup() {
    
     let cnv = createCanvas(windowWidth, windowHeight);
-    cnv.position(-9, -9);
+    cnv.position(0,0);
     cnv.elt.style.position = "fixed"
 
 
