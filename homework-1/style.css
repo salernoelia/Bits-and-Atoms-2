@@ -16,6 +16,8 @@
   width: 300px;
   height: 540px;
   margin: 40px auto 0 auto;
+  border: black;
+  border-style: double;
 }
 
 /** 
@@ -24,31 +26,58 @@
  */
 
 .card {
-  background-color: #e9c46a;
-  color: #fff;
+  background: rgb(255, 255, 255);
   border-radius: 5px;
   padding: 15px;
-  outline: black;
+  filter: drop-shadow(0px 0px 4px #0e0e0e);
 }
 
 .main-image {
+  display: flex;
   width: 80%;
-  margin: 20px auto 0;
-  padding: 15px 0px 0px 0px;
-  display: block;
-  background-color: rgb(255, 166, 0);
-  border-radius: 30%;
+  margin: 2vh auto 0;
+  background: linear-gradient(
+    326deg,
+    rgba(255, 241, 0, 1) 0%,
+    rgba(36, 245, 0, 1) 18%,
+    rgba(0, 255, 220, 1) 37%,
+    rgba(0, 136, 255, 1) 55%,
+    rgba(173, 0, 255, 1) 72%,
+    rgba(255, 0, 221, 1) 86%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  border-radius: 100%;
+  border: black;
+  border-style: dashed;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2vw 0 2vw;
 }
 
 .title {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-style: bold;
+  color: rgb(0, 0, 0);
+  margin: 1vw 0 1vw 0;
+}
+
+.subtitle {
+  margin: 0 auto auto auto;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-style: regular;
+  color: rgb(0, 0, 0);
 }
 
 p {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  padding: 0 20px 0 20px;
+  font-family: "Inter", sans-serif;
+  font-style: light;
+  padding: 0.3rem 0 0 0;
+  color: rgb(0, 0, 0);
 }
 
 .bottomLine {
