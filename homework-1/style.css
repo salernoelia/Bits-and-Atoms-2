@@ -29,7 +29,7 @@
 .card {
   background: rgb(255, 255, 255);
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   /* filter: drop-shadow(0px 0px 4px #0e0e0e); */
   border: #fce54c;
   border-style: solid;
@@ -155,7 +155,7 @@
 .type-flex {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .type-line {
@@ -177,12 +177,33 @@
 }
 
 .type-weakness-info {
-  margin-top: 10px;
+  margin-top: 15px;
   padding-left: 5px;
   font-size: 6pt;
   font-weight: 400;
 }
 
-.bottomLine {
-  background-color: rgb(5, 202, 110);
+.bottom-info {
+  display: grid;
+  /* justify-content: space-between; */
+  margin-top: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bottom-info-text-1 {
+  font-size: 8pt;
+  font-weight: 400;
+  text-align: left;
+}
+
+.bottom-info-text-2 {
+  font-size: 8pt;
+  font-weight: 400;
+  text-align: center;
+}
+
+.bottom-info-text-3 {
+  font-size: 8pt;
+  font-weight: 400;
+  text-align: right;
 }
