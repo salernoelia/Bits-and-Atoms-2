@@ -7,31 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Card</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
   <body>
     <!-- Keep this div with the class card! -->
     <div class="card">
+      <div class="title-grid">
+        <h3 class="title">Mewtwo</h3>
+        <h3 class="hp">60 HP</h3>
+      </div>
       <!-- Write your markup in here! Feel free to delete the title and the text! -->
-      <img class="main-image" src="pepe.png" alt="symbol" />
+      <div class="main-image">
+        <img id="mewtwo" src="mewtwo.jpeg" alt="symbol" />
+      </div>
 
-      <div class="text">
-        <h1 class="title">Pepe</h1>
-        <h3 class="subtitle">Meme God</h3>
-        <p>
-          Pepe is an absolute unit, his sly smile and deadpan expression can
-          make you smile, put in the right context he can make you commit doing
-          the nostril thingie.
+      <div class="poke-info">
+        <p id="poke-info-tag">
+          NO. 150 Genetic Pokémon HT: 6'07" WT: 269.0 Ibs.
         </p>
       </div>
+
+      <div class="attack-1">
+        <img src="star-type.png" alt="star-type" class="star-type" />
+        <img src="star-type.png" alt="star-type" class="star-type" />
+        <h3 class="attack-1-name">Psychic</h3>
+        <h3 class="attack-1-power">20+</h3>
+      </div>
+
+      <div class="attack-1-text">
+        <p>
+          This attack does 20 more damage for cach Energy attached to your
+          oponent's Active Pokemon.
+        </p>
+      </div>
+
       <div class="bottomLine"></div>
     </div>
   </body>

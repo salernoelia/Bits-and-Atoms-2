@@ -4,8 +4,9 @@
  */
 * {
   box-sizing: border-box;
-  /* margin: 0;
-  padding: 0; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /** 
@@ -27,57 +28,87 @@
 
 .card {
   background: rgb(255, 255, 255);
-  border-radius: 5px;
-  padding: 15px;
-  filter: drop-shadow(0px 0px 4px #0e0e0e);
+  border-radius: 20px;
+  padding: 20px;
+  /* filter: drop-shadow(0px 0px 4px #0e0e0e); */
+  border: #fce54c;
+  border-style: solid;
+  border-width: 18px;
+  background: radial-gradient(#b58fcc, #7e4ea9);
+}
+
+.title-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0.2rem 0 0.2rem 0;
+  align-items: center;
+  font-size: 12pt;
+}
+
+.title {
+  text-align: left;
+  justify-items: left;
+}
+
+.hp {
+  text-align: right;
+  justify-items: right;
+  font-style: regular;
+  font-weight: 400;
 }
 
 .main-image {
   display: flex;
-  width: 80%;
-  margin: 2vh auto 0;
-  background: linear-gradient(
-    326deg,
-    rgba(255, 241, 0, 1) 0%,
-    rgba(36, 245, 0, 1) 18%,
-    rgba(0, 255, 220, 1) 37%,
-    rgba(0, 136, 255, 1) 55%,
-    rgba(173, 0, 255, 1) 72%,
-    rgba(255, 0, 221, 1) 86%,
-    rgba(255, 0, 0, 1) 100%
-  );
-  border-radius: 100%;
-  border: black;
-  border-style: dashed;
+  justify-content: space-around;
+  margin-top: 10px;
 }
 
-.text {
+#mewtwo {
+  width: 100%;
+  border: #d0bc40;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.poke-info {
   display: flex;
-  flex-direction: column;
-  padding: 0 2vw 0 2vw;
+  background-color: #d0bc40;
+  font-size: 7pt;
+  font-style: italic;
+  justify-content: space-around;
+  padding: 2px;
+  margin: 5px 12px 5px 12px;
 }
 
-.title {
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-style: bold;
-  color: rgb(0, 0, 0);
-  margin: 1vw 0 1vw 0;
+#poke-info-tag {
+  width: fit-content;
 }
 
-.subtitle {
-  margin: 0 auto auto auto;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-style: regular;
-  color: rgb(0, 0, 0);
+.attack-1 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
-p {
-  font-family: "Inter", sans-serif;
-  font-style: light;
-  padding: 0.3rem 0 0 0;
-  color: rgb(0, 0, 0);
+.star-type {
+  width: 20px;
+  height: 15px;
+}
+
+.attack-1-name {
+  font-size: 13pt;
+  padding-left: 20px;
+}
+
+.attack-1-power {
+  font-size: 13pt;
+  margin-left: auto;
+  font-weight: 400;
+}
+
+.attack-1-text {
+  margin-top: 5px;
+  font-size: 8pt;
 }
 
 .bottomLine {
