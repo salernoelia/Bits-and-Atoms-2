@@ -30,6 +30,18 @@ div.heading {
   margin-bottom: 30px;
 }
 
+.item {
+  color: #dfbe99;
+  font-size: 4rem;
+  transition: all 500ms;
+}
+
+.item:hover {
+  color: hsl(34, 60%, 93%);
+  animation-timing-function: ease-in-out;
+  font-size: 5rem;
+}
+
 #papajones {
   color: green;
 }
@@ -41,8 +53,6 @@ div.heading {
 a {
   font-family: Pillowlava;
   font-style: normal;
-  font-size: 5vi;
-  color: #dfbe99;
   text-decoration: none;
 }
 

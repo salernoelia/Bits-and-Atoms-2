@@ -13,10 +13,12 @@ const recipe = {
 }
 
 
+
 function clicked() {
     if (document.getElementById("input").value == realAnswer) {
     console.log("worked!")
     wasItRight = "right";
+    console.log(recipe.duration)
     } else {
     wasItRight = "wrong";
 }
@@ -28,13 +30,13 @@ if (number < number2) {
     myParagraph.innerHTML = number2;
     console.log(myParagraph)
 
+}   
 }
+
+
+
+for (let i = 1; i < 100; i++){
+    console.log(i%5)
 }
-
-
-
-// for (let i = 1; i < 100; i++){
-//     console.log(i%5)
-// }
 
 
