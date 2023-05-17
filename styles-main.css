@@ -27,6 +27,7 @@ div.heading {
   grid-template-rows: repeat(1, 1fr);
   gap: 10px;
   justify-items: left;
+  margin-bottom: 30px;
 }
 
 #papajones {

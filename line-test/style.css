@@ -1,0 +1,41 @@
+/** 
+ * A very basic CSS reset:
+ * More about CSS resets: https://meyerweb.com/eric/tools/css/reset/
+ */
+* {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/** 
+ * Card sizing and positioning.
+ * Don't mess with this!
+ */
+.card {
+  width: 300px;
+  height: 540px;
+  margin: 40px auto 0 auto;
+  border: black;
+  border-style: double;
+}
+
+/** 
+ * Just some styling to make the card visible.
+ * Feel free to change this!
+ */
+
+.card {
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 20px 20px 10px 20px;
+}
+
+p {
+  line-height: 1em;
+  text-align: justify;
+  line-break: anywhere;
+  text-decoration-line: underline;
+  font-size: 2em;
+}
