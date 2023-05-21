@@ -46,17 +46,39 @@ div.heading {
   padding: 2vw;
 }
 
-.item {
-  color: #dfbe99;
-  font-size: 3.3rem;
-  transition: all 200ms;
+
+
+@media screen and (min-width: 250px) {
+  .item {
+    color: #dfbe99;
+    font-size: 1.3rem;
+    transition: all 200ms;
+    text-decoration: none;
+  }
+  .item:hover {
+    color: hsl(34, 60%, 93%);
+    animation-timing-function: ease-in-out;
+    font-size: 1.6rem;
+  }
 }
 
-.item:hover {
-  color: hsl(34, 60%, 93%);
-  animation-timing-function: ease-in-out;
-  font-size: 3.8rem;
+@media screen and (min-width: 720px) {
+  .item {
+    color: #dfbe99;
+    font-size: 3.3rem;
+    transition: all 200ms;
+  }
+  .item:hover {
+    color: hsl(34, 60%, 93%);
+    animation-timing-function: ease-in-out;
+    font-size: 3.8rem;
+  }
 }
+
+
+
+
+
 
 item.hover #hov1 {
   display: text-1;
