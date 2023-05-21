@@ -21,6 +21,15 @@ div.heading {
   color: brown;
 }
 
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  justify-items: left;
+  margin-bottom: 30px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -30,16 +39,27 @@ div.heading {
   margin-bottom: 30px;
 }
 
+.info-box {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  padding: 2vw;
+}
+
 .item {
   color: #dfbe99;
-  font-size: 4rem;
-  transition: all 500ms;
+  font-size: 3.3rem;
+  transition: all 200ms;
 }
 
 .item:hover {
   color: hsl(34, 60%, 93%);
   animation-timing-function: ease-in-out;
-  font-size: 5rem;
+  font-size: 3.8rem;
+}
+
+item.hover #hov1 {
+  display: text-1;
 }
 
 #papajones {

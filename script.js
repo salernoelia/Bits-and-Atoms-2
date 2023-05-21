@@ -46,5 +46,9 @@ function setup() {
     let sinMovementVal = map(factor, -1, -0.5, minVal, maxVal)
     return sinMovementVal;
   }
+
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
   
   
