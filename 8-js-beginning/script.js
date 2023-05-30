@@ -48,7 +48,6 @@ function add(a,b,c){
 }
 
 const addition = add(num1,num2,num3);
-
 console.log(addition);
 
 let sparguschlange = true
@@ -57,3 +56,5 @@ if (sparguschlange == true) {
     console.log("sparguschlange si cool")
 }
 
+const button = document.querySelector("[data-js-button]")
+console.log("button: works ", button);
