@@ -17,6 +17,8 @@
   width: 300px;
   height: 540px;
   margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /** 
@@ -51,4 +53,11 @@
   display: flexbox;
   justify-content: left;
   padding: 30px;
+}
+
+.numpad {
+  display: grid;  
+  justify-items: center;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
 }
