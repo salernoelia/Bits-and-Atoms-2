@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  
+  outline: none;
 }
 
 /** 
@@ -88,7 +88,6 @@
 }
 
 .timer {
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -99,7 +98,7 @@
   color: #0085FF;
   padding: 2px;
   font-weight: 300;
-  font-size: 36px;
+  font-size: 50px;
 }
 
 .subtitle {
@@ -115,20 +114,43 @@
   text-align: center;
 }
 
+.timer__inputBox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        display: none;
+      }
+
+.timer__input {
+  margin-top: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 50%;
+  height: 30px;
+  border: none;
+  margin-top: 130px;
+  background-color: lightgray;
+}
+
+.timer:focus{
+  outline: none;
+}
+
 .timer__btns {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 20px;
+  margin-top: 15px;
 
 }
 
 .timer__btn {
   padding: 5px;
   margin: 10px;
-
   border: none;
-
   /* sets cursor as a standard pointer */
   cursor: pointer;
 }

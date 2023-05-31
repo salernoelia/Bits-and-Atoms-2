@@ -1,6 +1,12 @@
+//rotation value 
 var current_rotation = 0;
 
 //Class of the Timer
+//Partly followed this youtube tutorial, but played with many elements
+//and added some things / linked elements with my names so i understand what
+//belongs to what without blindly following tutorial
+//https://www.youtube.com/watch?v=PIiMSMz7KzM
+
 class Timer {
 constructor (root) {
   //injects HTML from below
@@ -11,35 +17,31 @@ constructor (root) {
     card: document.querySelector(".card"),
     minutes: root.querySelector(".timer__item--minutes"),
     seconds: root.querySelector(".timer__item--seconds"),
+    timerInput: root.querySelector(".timer__input"),
     control: root.querySelector(".timer__btn--control"),
     reset: root.querySelector(".timer__btn--reset")
   };
 
-
-  // this.interval = null;
-  
   //sets remaining time to 90 seconds, when started without entering a time
   this.remainingSeconds = null;
 
-
 // sets up necessary dom selections and eventListeners
   this.el.control.addEventListener("click", () => {
-    if (this.interval === null) {
-      this.start();
-    } else {
-      this.stop();
-    }
-  });
 
-  this.el.reset.addEventListener("click", () => {
-    const inputMinutes = prompt("Enter number of minutes:");
+    if (this.el.timerInput.value > 60) {
+      alert("The maximum is 60 minutes.");
+    }
+
+    //prompt to define timer duration
+    // const inputMinutes = prompt("Enter number of minutes:");
+    const inputMinutes = this.el.timerInput.value;
 
     if (inputMinutes > 1 && inputMinutes <= 60) {
-      alert("You have set the time to " + inputMinutes + " minutes")
+      // alert("You have set the time to " + inputMinutes + " minutes")
     } 
 
     if (inputMinutes < 1) {
-      alert("You have set the time to " + inputMinutes + " minute")
+      // alert("You have set the time to " + inputMinutes + " minute")
     }
 
     if (inputMinutes <= 60) {
@@ -49,8 +51,38 @@ constructor (root) {
     }
 
     if (inputMinutes > 60) {
-      alert("The maximum is 60 minutes.");
+      // alert("The maximum is 60 minutes.");
     }
+    
+    if (this.interval === null) {
+      //starting timer
+      this.start();
+    } else {
+      //stopping timer
+      this.stop();
+    }
+  });
+
+  this.el.reset.addEventListener("click", () => {
+  //   //prompt to define timer duration
+  //   // const inputMinutes = prompt("Enter number of minutes:");
+  //   const inputMinutes = this.el.timerInput.value;
+
+  //   if (inputMinutes > 1 && inputMinutes <= 60) {
+  //     // alert("You have set the time to " + inputMinutes + " minutes")
+  //   } 
+
+  //   if (inputMinutes < 1) {
+  //     // alert("You have set the time to " + inputMinutes + " minute")
+  //   }
+
+  //   if (inputMinutes <= 60) {
+  //     this.stop();
+  //     this.remainingSeconds = inputMinutes * 60;
+  //     this.updateInterfaceTime();
+  //   }
+
+    
   });
  }
 
@@ -76,6 +108,8 @@ updateInterfaceControls() {
 
 start() {
   if (this.remainingSeconds <= 0) return;
+  this.el.timerInput.value = ("");
+  this.el.timerInput.disabled = true;
 
   this.interval = setInterval(() => {
     this.remainingSeconds--;
@@ -85,6 +119,7 @@ start() {
     if (this.remainingSeconds <= 0) {
       this.el.minutes.textContent = ("00");
       this.el.seconds.textContent = ("00");
+      
       const rotated = this.el.card;
       current_rotation += 2160;
       rotated.style.transform = 'rotate(' + current_rotation + 'deg)';
@@ -97,6 +132,7 @@ start() {
 }
 
 stop() {
+  this.el.timerInput.disabled = false;
   clearInterval(this.interval);
 
   this.interval = null;
@@ -116,17 +152,18 @@ static getHTML() {
       <span class="timer__item timer__item--seconds" id="timer-seconds">00</span>
     </div>
     <div class="subtitle">
-      <p class="subtitle__item">Minuten</p>
-      <p class="subtitle__item">Sekunden</p>
+      <p class="subtitle__item">Minutes</p>
+      <p class="subtitle__item">Seconds</p>
+    </div>
+    <div class="timer__inputBox">
+      <input type="number" class="timer__input" name="timer__input" placeholder="Set minutes...">
     </div>
     <div class="timer__btns">
         <button class="timer__btn timer__btn--control timer__btn--start">
           <span class="material-icons md-36">play_arrow</span>  
           </button>
           
-          <button class="timer__btn timer__btn--reset">
-            <span class="material-icons md-36">timer</span>  
-          </button>
+          
     </div>
   `;
 }
