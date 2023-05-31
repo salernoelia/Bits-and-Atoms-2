@@ -6,7 +6,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
+  
 }
 
 /** 
@@ -27,37 +28,140 @@
  */
 
 .card {
-
   background-color:#000000;
   height:540px;
   width:300px;
   border-radius:15px;
   padding:0px;
   color: white;
+
 }
 
-/* .main-image {
-  width: 80%;
-  margin: 20px auto 0;
-  display: block;
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
 
-.main-image.is-rotating {
-  /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
-  /* animation: 2 linear 0s infinite normal rotate; 
-  animation: 8s linear 0s infinite alternate rotate;
-}*/
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 48px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
 .title {
-  font-weight: 100  ;
   display: flexbox;
   justify-content: left;
-  padding: 30px;
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.numpad {
+.title__item {
+  font-weight: 200;
+}
+
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* justify__items: center; */
+}
+
+.timer__item {
+  color: #0085FF;
+  padding: 2px;
+  font-weight: 300;
+  font-size: 36px;
+}
+
+.subtitle {
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+}
+
+.subtitle__item {
+  padding: 6px ;
+  text-align: center;
+}
+
+/* .numpad {
   display: grid;  
   justify-items: center;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(3,1fr);
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 15px;
+}
+
+.numpad__item {
+  padding: 8px;
+} */
+
+.timer__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+
+}
+
+.timer__btn {
+  padding: 5px;
+  margin: 10px;
+  background: rgb(194, 156, 20);
+  border: none;
+  /* sets cursor as a standard pointer */
+  cursor: pointer;
+}
+
+
+.timer__btn--start {
+  background-color: #0085FF;
+  border-radius: 50px;
+  color: white;
+}
+
+.timer__btn--stop {
+  background-color: #cc3112;
+  border-radius: 50px;
+  color: white;
+}
+
+.timer__btn--reset {
+  border-radius: 50px;
+  color: white;
 }
