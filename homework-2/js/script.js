@@ -19,7 +19,8 @@ constructor (root) {
     seconds: root.querySelector(".timer__item--seconds"),
     timerInput: root.querySelector(".timer__input"),
     control: root.querySelector(".timer__btn--control"),
-    reset: root.querySelector(".timer__btn--reset")
+    reset: root.querySelector(".timer__btn--reset"),
+    timer: root.querySelector(".timer__item")
   };
 
   //sets remaining time to 90 seconds, when started without entering a time
@@ -95,6 +96,8 @@ start() {
   //timer cant start when no input / 0 
   if (this.remainingSeconds <= 0) return;
 
+  this.el.timer.style.color = "red";
+
   //reset value field
   this.el.timerInput.value = ("");
 
@@ -124,6 +127,7 @@ start() {
 
 //stopping the timer function
 stop() {
+  this.el.timer.style.color = "#0085FF";
   //value/time input field activated when stopped
   this.el.timerInput.disabled = false;
   clearInterval(this.interval);

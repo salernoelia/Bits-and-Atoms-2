@@ -100,6 +100,7 @@
   padding: 2px;
   font-weight: 300;
   font-size: 50px;
+  transition: 0.2s ease-in;
 }
 
 .subtitle {
