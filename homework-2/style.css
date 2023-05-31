@@ -13,6 +13,7 @@
 /** 
  * Card sizing and positioning.
  * Don't mess with this!
+ * okay :))!
  */
 .card {
   width: 300px;
@@ -21,11 +22,6 @@
   display: flex;
   flex-direction: column;
 }
-
-/** 
- * Just some styling to make the card visible.
- * Feel free to change this!
- */
 
 .card {
   background-color:#000000;
@@ -91,6 +87,7 @@
 }
 
 .timer {
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -117,20 +114,6 @@
   text-align: center;
 }
 
-/* .numpad {
-  display: grid;  
-  justify-items: center;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(3,1fr);
-  margin-left: 50px;
-  margin-right: 50px;
-  padding-top: 15px;
-}
-
-.numpad__item {
-  padding: 8px;
-} */
-
 .timer__btns {
   display: flex;
   flex-direction: row;
@@ -144,6 +127,7 @@
   margin: 10px;
   background: rgb(194, 156, 20);
   border: none;
+
   /* sets cursor as a standard pointer */
   cursor: pointer;
 }
