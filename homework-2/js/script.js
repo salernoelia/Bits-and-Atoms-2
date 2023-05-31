@@ -86,7 +86,7 @@ start() {
       this.el.minutes.textContent = ("00");
       this.el.seconds.textContent = ("00");
       const rotated = this.el.card;
-      current_rotation += 540;
+      current_rotation += 2160;
       rotated.style.transform = 'rotate(' + current_rotation + 'deg)';
       this.stop();
       

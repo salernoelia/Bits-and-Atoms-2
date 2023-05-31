@@ -21,17 +21,17 @@
   margin: 40px auto 0 auto;
   display: flex;
   flex-direction: column;
-  transition: transform 0.5s ease-in;
+  transition: transform 2s ease-in-out;
 }
 
 .card {
+  transition: 2s ease-in-out;
   background-color:#000000;
   height:540px;
   width:300px;
   border-radius:15px;
   padding:0px;
   color: white;
-
 }
 
 @font-face {
@@ -126,7 +126,7 @@
 .timer__btn {
   padding: 5px;
   margin: 10px;
-  background: rgb(194, 156, 20);
+
   border: none;
 
   /* sets cursor as a standard pointer */
@@ -135,10 +135,18 @@
 
 
 .timer__btn--start {
-  background-color: #0085FF;
+  background-color: #0084ffd3;
   border-radius: 50px;
   color: white;
 }
+
+.timer__btn--start:hover {
+  transition: 0.5s ease-in-out;
+  background-color: #2994f9;
+  border-radius: 50px;
+  color: white;
+}
+
 
 .timer__btn--stop {
   background-color: #cc3112;
@@ -146,7 +154,22 @@
   color: white;
 }
 
+.timer__btn--stop:hover {
+  transition: 0.5s ease-in-out;
+  background-color: #ed411e;
+  border-radius: 50px;
+  color: white;
+}
+
 .timer__btn--reset {
+  border-radius: 50px;
+  background: rgb(194, 156, 20);
+  color: white;
+}
+
+.timer__btn--reset:hover {
+  transition: 0.5s ease-in-out;
+  background: rgb(223, 182, 35);
   border-radius: 50px;
   color: white;
 }
