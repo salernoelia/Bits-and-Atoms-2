@@ -1,3 +1,5 @@
+var current_rotation = 0;
+
 //Class of the Timer
 class Timer {
 constructor (root) {
@@ -84,7 +86,8 @@ start() {
       this.el.minutes.textContent = ("00");
       this.el.seconds.textContent = ("00");
       const rotated = this.el.card;
-      rotated.style.transform = 'rotate(180deg)';
+      current_rotation += 540;
+      rotated.style.transform = 'rotate(' + current_rotation + 'deg)';
       this.stop();
       
     }
