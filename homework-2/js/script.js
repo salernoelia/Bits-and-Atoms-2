@@ -63,37 +63,22 @@ constructor (root) {
     }
   });
 
-  this.el.reset.addEventListener("click", () => {
-  //   //prompt to define timer duration
-  //   // const inputMinutes = prompt("Enter number of minutes:");
-  //   const inputMinutes = this.el.timerInput.value;
-
-  //   if (inputMinutes > 1 && inputMinutes <= 60) {
-  //     // alert("You have set the time to " + inputMinutes + " minutes")
-  //   } 
-
-  //   if (inputMinutes < 1) {
-  //     // alert("You have set the time to " + inputMinutes + " minute")
-  //   }
-
-  //   if (inputMinutes <= 60) {
-  //     this.stop();
-  //     this.remainingSeconds = inputMinutes * 60;
-  //     this.updateInterfaceTime();
-  //   }
-
-    
-  });
  }
 
+
 updateInterfaceTime(){
+  //calculate minutes
   const minutes = Math.floor(this.remainingSeconds / 60);
+
   const seconds = this.remainingSeconds % 60;
+
+  //define timer values at start to be 00:00
   this.el.minutes.textContent = minutes.toString().padStart(2, "0");
   this.el.seconds.textContent = seconds.toString().padStart(2, "0");
 }
 
 updateInterfaceControls() {
+  //update the play to the stop button (icon) and back
   if (this.interval === null) {
     this.el.control.innerHTML = `<span class="material-icons md-36">play_arrow</span> `;
     this.el.control.classList.add("timer__btn--start");
@@ -105,17 +90,23 @@ updateInterfaceControls() {
 
   }
 }
-
+//timer starting function
 start() {
+  //timer cant start when no input / 0 
   if (this.remainingSeconds <= 0) return;
+
+  //reset value field
   this.el.timerInput.value = ("");
+
+  //value/time input field deactivated when started
   this.el.timerInput.disabled = true;
 
   this.interval = setInterval(() => {
     this.remainingSeconds--;
     this.updateInterfaceTime();
 
-
+    //bugfix that if timer goes under 0 seconds when a decimal value is entred
+    //it gets reset to 0 instead of a negative value
     if (this.remainingSeconds <= 0) {
       this.el.minutes.textContent = ("00");
       this.el.seconds.textContent = ("00");
@@ -127,19 +118,23 @@ start() {
       
     }
   }, 1000);
-
+  //switch play to stop
   this.updateInterfaceControls();
 }
 
+//stopping the timer function
 stop() {
+  //value/time input field activated when stopped
   this.el.timerInput.disabled = false;
   clearInterval(this.interval);
-
   this.interval = null;
 
+  //switch stop to play
   this.updateInterfaceControls();
 }
 
+
+//HTML which gets injected
 static getHTML() {
   return `
   <!-- I tried using the BEM naming convention -->
